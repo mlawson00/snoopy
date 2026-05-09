@@ -1,0 +1,29 @@
+services:
+  codex_workbench:
+    build:
+      context: .
+      dockerfile: infra/codex/Dockerfile
+      args:
+        USER_UID: ${HOST_UID:-1000}
+        USER_GID: ${HOST_GID:-1000}
+    image: snoopy_codex_workbench
+    working_dir: /workspace
+    stdin_open: true
+    tty: true
+    gpus: all
+    environment:
+      HOME: /home/codex
+      CODEX_HOME: /home/codex/.codex
+      XDG_CACHE_HOME: /home/codex/.cache
+      UV_CACHE_DIR: /home/codex/.cache/uv
+      npm_config_cache: /home/codex/.cache/npm
+      OPENAI_API_KEY: ${OPENAI_API_KEY:-}
+      PYTHONUNBUFFERED: "1"
+    volumes:
+      - .:/workspace
+      - codex_home:/home/codex/.codex
+      - codex_cache:/home/codex/.cache
+
+volumes:
+  codex_home:
+  codex_cache:
