@@ -1,0 +1,22 @@
+@import "tailwindcss";
+@import "@snoopy/ui/theme.css";
+
+html {
+  min-height: 100%;
+  background:
+    linear-gradient(135deg, rgba(14, 116, 144, 0.11) 0 18rem, transparent 18rem),
+    linear-gradient(315deg, rgba(190, 80, 42, 0.1) 0 14rem, transparent 14rem),
+    linear-gradient(180deg, #f7faf5, #eef4ef 56%, #f1e8d8);
+}
+
+body {
+  margin: 0;
+  background:
+    linear-gradient(rgba(15, 23, 42, 0.045) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(15, 23, 42, 0.035) 1px, transparent 1px);
+  background-size: 96px 96px;
+}
+
+a {
+  text-decoration: none;
+}

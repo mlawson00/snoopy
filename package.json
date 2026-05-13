@@ -1,0 +1,40 @@
+{
+  "name": "snoopy",
+  "version": "0.1.0",
+  "private": true,
+  "packageManager": "pnpm@10.14.0",
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ],
+  "scripts": {
+    "build": "PATH=$PWD/.bin:$PATH turbo run build",
+    "dev": "PATH=$PWD/.bin:$PATH turbo run dev --parallel",
+    "start": "PATH=$PWD/.bin:$PATH pnpm --filter @snoopy/web exec next start",
+    "lint": "PATH=$PWD/.bin:$PATH turbo run lint",
+    "test": "PATH=$PWD/.bin:$PATH turbo run test",
+    "typecheck": "PATH=$PWD/.bin:$PATH turbo run typecheck",
+    "e2e:install": "PATH=$PWD/.bin:$PATH pnpm --filter @snoopy/web exec playwright install chromium",
+    "e2e:smoke": "PATH=$PWD/.bin:$PATH pnpm --filter @snoopy/web exec playwright test",
+    "self-audit": "PATH=$PWD/.bin:$PATH tsx scripts/self-audit.ts",
+    "posthog:cycle": "PATH=$PWD/.bin:$PATH tsx scripts/posthog-cycle-summary.ts",
+    "posthog:browser": "PATH=$PWD/.bin:$PATH tsx scripts/verify-browser-posthog.ts",
+    "db:start": "supabase start",
+    "db:stop": "supabase stop",
+    "db:reset": "supabase db reset",
+    "db:lint": "supabase db lint",
+    "db:types": "supabase gen types typescript --local > packages/db/src/database.types.ts"
+  },
+  "devDependencies": {
+    "@eslint/js": "^10.0.1",
+    "@types/node": "^25.6.0",
+    "eslint": "^10.2.0",
+    "prettier": "^3.8.2",
+    "supabase": "^2.89.1",
+    "turbo": "^2.9.6",
+    "tsx": "^4.20.6",
+    "typescript": "^6.0.2",
+    "typescript-eslint": "^8.58.1",
+    "vitest": "^4.1.4"
+  }
+}

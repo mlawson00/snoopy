@@ -1,0 +1,45 @@
+{
+  "name": "@snoopy/web",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "build": "next build",
+    "dev": "next dev --turbopack",
+    "start": "next start",
+    "e2e": "playwright test",
+    "lint": "eslint src next.config.ts playwright.config.ts",
+    "test": "vitest run --passWithNoTests",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@ai-sdk/openai-compatible": "^2.0.47",
+    "@next/env": "^16.2.6",
+    "@snoopy/auth": "workspace:*",
+    "@snoopy/billing": "workspace:*",
+    "@snoopy/config": "workspace:*",
+    "@snoopy/content": "workspace:*",
+    "@snoopy/db": "workspace:*",
+    "@snoopy/reports": "workspace:*",
+    "@snoopy/runner": "workspace:*",
+    "@snoopy/ui": "workspace:*",
+    "@supabase/supabase-js": "^2.103.0",
+    "@tailwindcss/postcss": "^4.1.14",
+    "ai": "^6.0.177",
+    "clsx": "^2.1.1",
+    "lucide-react": "^0.561.0",
+    "next": "^16.2.3",
+    "posthog-js": "^1.372.10",
+    "posthog-node": "^5.33.4",
+    "react": "^19.2.5",
+    "react-dom": "^19.2.5",
+    "tailwindcss": "^4.1.14",
+    "zod": "^4.3.6"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.59.1",
+    "@types/react": "^19.2.14",
+    "@types/react-dom": "^19.2.3",
+    "typescript": "^6.0.2",
+    "vitest": "^4.1.4"
+  }
+}
