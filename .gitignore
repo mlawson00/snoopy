@@ -10,3 +10,10 @@ __pycache__/
 .vscode/
 .codex/
 node_modules/
+.omnifocus-chrome-profile/
+.next/
+test-results/
+*.tsbuildinfo
+.pnpm-store/
+.turbo/
+node_modules/

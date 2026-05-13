@@ -12,19 +12,25 @@ RUN apt-get update && \
       bash-completion \
       build-essential \
       ca-certificates \
+      chromium \
       curl \
       fd-find \
+      fluxbox \
       git \
       gnupg \
       jq \
       less \
       nano \
+      novnc \
       openssh-client \
       pkg-config \
       postgresql-client \
       ripgrep \
       sudo \
       unzip \
+      websockify \
+      x11vnc \
+      xvfb \
       xz-utils \
       zip && \
     install -d -m 0755 /etc/apt/keyrings && \
