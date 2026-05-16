@@ -1,20 +1,24 @@
 @import "tailwindcss";
 @import "@snoopy/ui/theme.css";
 
+@theme inline {
+  --color-background: #f5f2ec;
+  --color-foreground: #0f172a;
+  --color-muted: #64748b;
+  --color-surface: #ffffff;
+  --color-border: rgba(15, 23, 42, 0.09);
+  --color-ink-dark: #0f172a;
+  --color-amber: #b45309;
+  --color-amber-light: #fef3c7;
+}
+
 html {
   min-height: 100%;
-  background:
-    linear-gradient(135deg, rgba(14, 116, 144, 0.11) 0 18rem, transparent 18rem),
-    linear-gradient(315deg, rgba(190, 80, 42, 0.1) 0 14rem, transparent 14rem),
-    linear-gradient(180deg, #f7faf5, #eef4ef 56%, #f1e8d8);
+  background-color: #f5f2ec;
 }
 
 body {
   margin: 0;
-  background:
-    linear-gradient(rgba(15, 23, 42, 0.045) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(15, 23, 42, 0.035) 1px, transparent 1px);
-  background-size: 96px 96px;
 }
 
 a {
