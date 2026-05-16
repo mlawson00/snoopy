@@ -1,9 +1,12 @@
 import type { Metadata } from "next";
+import { Inter } from "next/font/google";
 import "./globals.css";
 
+const inter = Inter({ subsets: ["latin"], variable: "--font-inter" });
+
 export const metadata: Metadata = {
-  title: "Snoopy",
-  description: "Persona-led browser audits for marketing and commerce flows.",
+  title: "Snoopy — AI website teardown",
+  description: "Named AI agents read your page, argue in public, and hand you a fix queue. Run your first teardown in 90 seconds.",
 };
 
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
@@ -13,8 +16,8 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
   };
 
   return (
-    <html lang="en">
-      <body>
+    <html lang="en" className={`${inter.variable} bg-background scroll-smooth`}>
+      <body className="font-sans antialiased">
         <script
           id="snoopy-public-config"
           dangerouslySetInnerHTML={{

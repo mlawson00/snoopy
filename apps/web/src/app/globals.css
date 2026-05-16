@@ -2,6 +2,8 @@
 @import "@snoopy/ui/theme.css";
 
 @theme inline {
+  --font-sans: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
+
   --color-background: #f5f2ec;
   --color-foreground: #0f172a;
   --color-muted: #64748b;
@@ -10,6 +12,9 @@
   --color-ink-dark: #0f172a;
   --color-amber: #b45309;
   --color-amber-light: #fef3c7;
+  --color-ink-panel: #0f172a;
+
+  --radius: 1rem;
 }
 
 html {
@@ -23,4 +28,13 @@ body {
 
 a {
   text-decoration: none;
+}
+
+/* Subtle card lift on hover */
+.card-hover {
+  transition: transform 0.18s ease, box-shadow 0.18s ease;
+}
+.card-hover:hover {
+  transform: translateY(-2px) scale(1.01);
+  box-shadow: 0 8px 30px rgba(15, 23, 42, 0.08);
 }
